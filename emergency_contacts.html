@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Emergency Contacts</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="create_profile.html">Create Profile</a></li>
+            <li><a href="teammates.html">Teammates</a></li>
+            <li><a href="payroll.html">Payroll</a></li>
+            <li><a href="personal_info.html">Personal Information</a></li>
+            <li><a href="emergency_contacts.html">Emergency Contacts</a></li>
+            <li><a href="performance.html">Performance</a></li>
+            <li><a href="travel.html">Travel</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form id="emergencyContactForm">
+            <label for="emergencyContactName">Emergency Contact Name:</label>
+            <input type="text" id="emergencyContactName" name="emergencyContactName" required>
+            
+            <label for="relationship">Relationship:</label>
+            <input type="text" id="relationship" name="relationship" required>
+            
+            <label for="emergencyContactPhone">Emergency Contact Phone:</label>
+            <input type="text" id="emergencyContactPhone" name="emergencyContactPhone" required>
+            
+            <label for="emergencyContactEmail">Emergency Contact Email:</label>
+            <input type="email" id="emergencyContactEmail" name="emergencyContactEmail" required>
+            
+            <label for="language">Language Spoken:</label>
+            <input type="text" id="language" name="language" required>
+            
+            <button type="submit">Save Emergency Contact</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 HR Platform</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
