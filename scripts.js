@@ -63,6 +63,22 @@ document.addEventListener('DOMContentLoaded', function() {
         displayData('payroll', document.getElementById('payrollList'));
     }
 
+    if (document.getElementById('personalInfoList')) {
+        displayData('personalInfo', document.getElementById('personalInfoList'));
+    }
+
+    if (document.getElementById('emergencyContactsList')) {
+        displayData('emergencyContacts', document.getElementById('emergencyContactsList'));
+    }
+
+    if (document.getElementById('performanceList')) {
+        displayData('performance', document.getElementById('performanceList'));
+    }
+
+    if (document.getElementById('travelList')) {
+        displayData('travel', document.getElementById('travelList'));
+    }
+
     if (document.getElementById('search')) {
         document.getElementById('search').addEventListener('input', function(e) {
             searchEmployees(e.target.value);
@@ -89,6 +105,7 @@ function saveProfile(data) {
 function savePersonalInfo(data) {
     let personalInfo = JSON.parse(localStorage.getItem('personalInfo')) || [];
     let info = {
+        id: data.get('id'), // assuming there's an employee ID to link this data to a profile
         address: data.get('address'),
         city: data.get('city'),
         country: data.get('country'),
@@ -103,6 +120,7 @@ function savePersonalInfo(data) {
 function savePerformance(data) {
     let performance = JSON.parse(localStorage.getItem('performance')) || [];
     let record = {
+        id: data.get('id'), // assuming there's an employee ID to link this data to a profile
         notes: data.get('notes'),
         date: data.get('date'),
         evaluationDate: data.get('evaluationDate'),
@@ -115,6 +133,7 @@ function savePerformance(data) {
 function saveTravel(data) {
     let travel = JSON.parse(localStorage.getItem('travel')) || [];
     let record = {
+        id: data.get('id'), // assuming there's an employee ID to link this data to a profile
         origin: data.get('origin'),
         destination: data.get('destination'),
         travelDate: data.get('travelDate')
@@ -126,6 +145,7 @@ function saveTravel(data) {
 function saveEmergencyContact(data) {
     let emergencyContacts = JSON.parse(localStorage.getItem('emergencyContacts')) || [];
     let contact = {
+        id: data.get('id'), // assuming there's an employee ID to link this data to a profile
         name: data.get('emergencyContactName'),
         relationship: data.get('relationship'),
         phone: data.get('emergencyContactPhone'),
