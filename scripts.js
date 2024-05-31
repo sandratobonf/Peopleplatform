@@ -145,4 +145,43 @@ function saveTravel(data) {
 function saveEmergencyContact(data) {
     let emergencyContacts = JSON.parse(localStorage.getItem('emergencyContacts')) || [];
     let contact = {
-        id: data.get('id'), // assuming there's an
+        id: data.get('id'), // assuming there's an employee ID to link this data to a profile
+        name: data.get('emergencyContactName'),
+        relationship: data.get('relationship'),
+        phone: data.get('emergencyContactPhone'),
+        email: data.get('emergencyContactEmail'),
+        language: data.get('language')
+    };
+    emergencyContacts.push(contact);
+    localStorage.setItem('emergencyContacts', JSON.stringify(emergencyContacts));
+}
+
+function displayData(key, element) {
+    const data = JSON.parse(localStorage.getItem(key)) || [];
+    element.innerHTML = data.map(item => `<li>${JSON.stringify(item)}</li>`).join('');
+}
+
+function displayEmployees(key, element) {
+    const employees = JSON.parse(localStorage.getItem(key)) || [];
+    element.innerHTML = employees.map(emp => `
+        <li>
+            <div>
+                <strong>Name:</strong> ${emp.name} ${emp.lastName} <br>
+                <strong>Location:</strong> ${emp.location} <br>
+                <strong>Project/Title:</strong> ${emp.projectTitle} <br>
+                <strong>Start Date:</strong> ${emp.startDate} <br>
+                <strong>Vessel:</strong> ${emp.vessel} <br>
+            </div>
+        </li>`).join('');
+}
+
+function searchEmployees(query) {
+    const employees = JSON.parse(localStorage.getItem('employees')) || [];
+    const results = employees.filter(emp => 
+        Object.values(emp).some(val => val.toLowerCase().includes(query.toLowerCase()))
+    );
+    const employeeList = document.getElementById('employeeList');
+    if (employeeList) {
+        displayEmployees('employees', employeeList, results);
+    }
+}
