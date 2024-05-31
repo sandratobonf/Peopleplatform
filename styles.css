@@ -42,8 +42,7 @@ form label {
     margin-top: 0.5em;
 }
 
-form input,
-form textarea {
+form input, form textarea {
     margin-bottom: 1em;
     padding: 0.5em;
     width: 100%;
