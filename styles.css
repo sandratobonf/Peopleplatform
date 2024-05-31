@@ -17,6 +17,7 @@ nav ul {
     padding: 0;
     text-align: center;
     background-color: #333;
+    margin: 0;
 }
 
 nav ul li {
@@ -27,6 +28,12 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 1em;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
 }
 
 main {
