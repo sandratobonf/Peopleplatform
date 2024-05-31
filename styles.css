@@ -2,7 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #333;
+    color: white;
 }
 
 header {
@@ -10,30 +11,6 @@ header {
     color: white;
     text-align: center;
     padding: 1em 0;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    background-color: #333;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 1em;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 1em;
-    display: inline-block;
-}
-
-nav ul li a:hover {
-    background-color: #555;
 }
 
 main {
@@ -49,7 +26,7 @@ form label {
     margin-top: 0.5em;
 }
 
-form input, form textarea {
+form input {
     margin-bottom: 1em;
     padding: 0.5em;
     width: 100%;
@@ -75,31 +52,9 @@ ul {
 }
 
 ul li {
-    background-color: #fff;
+    background-color: #444;
     margin: 0.5em 0;
     padding: 0.5em;
     border: 1px solid #ddd;
-}
-
-button.nav-button {
-    background-color: #4CAF50;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 10px;
-}
-
-button.nav-button:hover {
-    background-color: #45a049;
-}
-
-button.nav-button a {
-    color: white;
-    text-decoration: none;
-}
-
-button.nav-button a:hover {
-    text-decoration: underline;
 }
