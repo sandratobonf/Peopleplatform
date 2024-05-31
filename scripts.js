@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (document.getElementById('employeeList')) {
-        displayData('employees', document.getElementById('employeeList'));
+        displayEmployees('employees', document.getElementById('employeeList'));
     }
 
     if (document.getElementById('payrollList')) {
@@ -145,29 +145,4 @@ function saveTravel(data) {
 function saveEmergencyContact(data) {
     let emergencyContacts = JSON.parse(localStorage.getItem('emergencyContacts')) || [];
     let contact = {
-        id: data.get('id'), // assuming there's an employee ID to link this data to a profile
-        name: data.get('emergencyContactName'),
-        relationship: data.get('relationship'),
-        phone: data.get('emergencyContactPhone'),
-        email: data.get('emergencyContactEmail'),
-        language: data.get('language')
-    };
-    emergencyContacts.push(contact);
-    localStorage.setItem('emergencyContacts', JSON.stringify(emergencyContacts));
-}
-
-function displayData(key, element) {
-    const data = JSON.parse(localStorage.getItem(key)) || [];
-    element.innerHTML = data.map(item => `<li>${JSON.stringify(item)}</li>`).join('');
-}
-
-function searchEmployees(query) {
-    const employees = JSON.parse(localStorage.getItem('employees')) || [];
-    const results = employees.filter(emp => 
-        Object.values(emp).some(val => val.toLowerCase().includes(query.toLowerCase()))
-    );
-    const employeeList = document.getElementById('employeeList');
-    if (employeeList) {
-        employeeList.innerHTML = results.map(emp => `<li>${JSON.stringify(emp)}</li>`).join('');
-    }
-}
+        id: data.get('id'), // assuming there's an
