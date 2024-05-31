@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Performance Management</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="create_profile.html">Create Profile</a></li>
+            <li><a href="teammates.html">Teammates</a></li>
+            <li><a href="payroll.html">Payroll</a></li>
+            <li><a href="personal_info.html">Personal Information</a></li>
+            <li><a href="emergency_contacts.html">Emergency Contacts</a></li>
+            <li><a href="performance.html">Performance</a></li>
+            <li><a href="travel.html">Travel</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form id="performanceForm">
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes" required></textarea>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="evaluationDate">Evaluation Date:</label>
+            <input type="date" id="evaluationDate" name="evaluationDate" required>
+            
+            <label for="evaluationForm">Evaluation Form:</label>
+            <input type="file" id="evaluationForm" name="evaluationForm">
+            
+            <button type="submit">Save Performance Data</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 HR Platform</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
